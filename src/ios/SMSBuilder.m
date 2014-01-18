@@ -15,18 +15,16 @@
 		
         if (![messageClass canSendText]) {
 			
-			UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notice" message:@"SMS Text not available."
-														   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
-			[alert show];
-			[alert release];
-			return;
+					UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notice" message:@"SMS Text not available."
+																   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
+					[alert show];
+					return;
         }
 		
-    } else {
+  } else {
 		UIAlertView *alert = [[UIAlertView alloc] initWithTitle:@"Notice" message:@"SMS Text not available."
 													   delegate:self cancelButtonTitle:@"OK" otherButtonTitles: nil];
 		[alert show];
-		[alert release];
 		return;
 	}
 	
@@ -44,7 +42,6 @@
 		[picker setRecipients:[ toRecipientsString componentsSeparatedByString:@","]];
     
     [self.viewController presentModalViewController:picker animated:YES];
-    [picker release];
 	
 }
 
@@ -74,7 +71,6 @@
 	
 	NSString* jsString = [[NSString alloc] initWithFormat:@"window.plugins.smsBuilder._didFinishWithResult(%d);",webviewResult];
 	[self writeJavascript:jsString];
-	[jsString release];
 	
 }
 
