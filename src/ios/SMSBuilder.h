@@ -7,5 +7,9 @@
 @interface SMSBuilder : CDVPlugin <MFMessageComposeViewControllerDelegate> {
 }
 
-- (void)showSMSBuilder:(NSArray*)arguments withDict:(NSDictionary*)options;
+//Uncomment this for cordova < 3.0
+//- (void)showSMSBuilder:(NSArray*)arguments withDict:(NSDictionary*)options;
+
+//Comment this for cordova < 3.0
+- (void) showSMSBuilder:(CDVInvokedUrlCommand*)command;
 @end

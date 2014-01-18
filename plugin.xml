@@ -16,7 +16,9 @@
 	</engines>
 
 
-	<asset src="www/SMSBuilder.js" target="js/plugins/SMSBuilder.js" />
+	<js-module src="www/SMSBuilder.js" name="SMSBuilder">
+		<clobbers target="SMSBuilder" />
+	</js-module>
 
 	<!-- ios -->
 	<platform name="ios">
@@ -30,7 +32,7 @@
 
 		<source-file src="src/ios/SMSBuilder.m" />
         
-        <framework src="MessageUI.framework" />
+    <framework src="MessageUI.framework" />
 	</platform>
 
 </plugin>

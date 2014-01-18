@@ -2,10 +2,10 @@
 
 @implementation SMSBuilder
 
--(CDVPlugin*) initWithWebView:(UIWebView*)theWebView
+- (void) showSMSBuilder:(CDVInvokedUrlCommand*)command
 {
-    self = (SMSBuilder*)[super initWithWebView:theWebView];
-    return self;
+	NSDictionary *parameters = [command.arguments objectAtIndex:0];
+	[self showSMSBuilder:nil withDict:parameters];
 }
 
 - (void)showSMSBuilder:(NSArray*)arguments withDict:(NSDictionary*)options
