@@ -33,6 +33,7 @@
 		<source-file src="src/ios/SMSBuilder.m" />
         
     <framework src="MessageUI.framework" />
+    <framework src="Foundation.framework" weak="true" />
 	</platform>
 
 </plugin>
