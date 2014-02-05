@@ -15,13 +15,11 @@
 		<engine name="cordova" version=">=2.8.0" />
 	</engines>
 
-
-	<js-module src="www/SMSBuilder.js" name="SMSBuilder">
-		<clobbers target="SMSBuilder" />
-	</js-module>
-
 	<!-- ios -->
 	<platform name="ios">
+		<js-module src="www/SMSBuilder.js" name="SMSBuilder">
+			<clobbers target="SMSBuilder" />
+		</js-module>
 		<config-file target="config.xml" parent="/*">
 			<feature name="SMSBuilder">
 				<param name="ios-package" value="SMSBuilder" />
