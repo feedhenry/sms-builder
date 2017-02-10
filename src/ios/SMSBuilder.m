@@ -70,7 +70,8 @@
     [self.viewController dismissModalViewControllerAnimated:YES];
 	
 	NSString* jsString = [[NSString alloc] initWithFormat:@"window.plugins.smsBuilder._didFinishWithResult(%d);",webviewResult];
-	[self.commandDelegate evalJs:jsString];	
+	[self.commandDelegate evalJs:jsString];
+	
 }
 
 @end
